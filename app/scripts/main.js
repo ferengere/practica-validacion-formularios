@@ -19,6 +19,7 @@ $.validator.setDefaults({
 			}
 			console.log('cuota: ' + cuota);
 			
+			$('#myModal .modal-body p').html('');
 			$('#myModal .modal-body').append('<p>Se va a proceder a darle de alta.</p>');
 			$('#myModal .modal-body').append('<p>Se le cobrará una primera cuota de ' + cuota + '€.</p>');
 			$('#myModal .modal-body').append('<p class="text-warning"><small>Pulse Aceptar si está conforme.</small></p>');
@@ -66,7 +67,7 @@ $('#formulario').validate({
 	//reglas de validación para todos los campos
 	rules: {
 		//Información de contacto
-		inputNombre: {
+		/*inputNombre: {
 			required: true
 		},
 		inputApellidos: {
@@ -131,7 +132,7 @@ $('#formulario').validate({
 		},
 		inputContrasenna2: {
 			compPass: true
-		}
+		}*/
 	},
 	messages: {
 		//Información de contacto
