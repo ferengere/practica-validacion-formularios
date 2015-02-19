@@ -21,37 +21,47 @@
 
     <div class="container">
       <div class="header">
-      <h1>Práctica validación formularios</h1>
+      <h1>Práctica Validación Formularios</h1>
       <p><a href="https://github.com/ferengere/practica-validacion-formularios" target="_blank">
         Enlace a proyecto en GitHub</a></p>
     </div>
     <div class="">
-    <form>
+    <form id="formulario" novalidate action="accion.php" method="post">
     <div class="panel panel-primary">
     <div class="panel-heading">Información de contacto:</div>
     <div class="panel-body">
     <div class="form-group">
          <label for="inputNombre">Nombre *</label>
-         <input type="text" class="form-control" placeholder="Introduzca el Nombre...">
+         <input name="inputNombre" id="inputNombre" type="text" class="form-control" placeholder="Introduzca el nombre...">
      </div>
      <div class="form-group">
          <label for="inputApellidos">Apellidos *</label>
-         <input type="text" class="form-control" placeholder="Introduzca los Apellidos...">
+         <input name="inputApellidos" id="inputApellidos" type="text" class="form-control" placeholder="Introduzca los apellidos...">
      </div>
       <div class="form-group">
          <label for="inputTelefono">Teléfono *</label>
-         <input type="text" class="form-control" placeholder="Introduzca el Teléfono...">
+         <input name="inputTelefono" id="inputTelefono" type="text" class="form-control" placeholder="Introduzca el teléfono...">
      </div>
      <div class="form-group">
          <label for="inputEmail1">Email *</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <input name="inputEmail1" id="inputEmail1" type="text" class="form-control"  placeholder="Introduzca el email...">
      </div>
      <div class="form-group">
-         <label for="inputEmail2">Email *</label>
-         <input type="email" class="form-control"  placeholder="Repita el Email...">
+         <label for="inputEmail2">Email</label>
+         <input name="inputEmail2" id="inputEmail2" type="text" class="form-control"  placeholder="Repita el email...">
+     </div>
+     <div class="form-group">
+         <label for="inputConocido">¿Cómo nos ha conocido?</label>
+         <select name="inputConocido" id="inputConocido" class="form-control">
+         <option selected="selected" value="1">Prefiero no contestar</option>
+         <option value="2">Publicidad</option>
+         <option value="3">Profesionales del sector</option>
+         <option value="4">Internet</option>
+         <option value="5">A través de un amigo o conocido</option>
+         </select>
      </div>
      </div>
-     <div class="panel-footer">Panel footer</div>
+     <div class="panel-footer">* Campo Requerido</div>
      </div> 
 
      
@@ -60,80 +70,108 @@
      <div class="panel-heading">Datos de facturación:</div>
   <div class="panel-body">
    <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputDemandante">Demandante *</label>
+         <select name="inputDemandante" id="inputDemandante" class="form-control">
+            <option selected="selected" value="p">Particular</option>
+            <option value="e">Empresa</option>
+         </select>
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label id="lblCifNif" for="inputCifNif">NIF *</label>
+         <input name="inputCifNif" id="inputCifNif" type="text" class="form-control"  placeholder="Introduza su identificador fiscal...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label id="lblNombreEmpresa" for="inputNombreEmpresa">Nombre *</label>
+         <input name="inputNombreEmpresa" id="inputNombreEmpresa" type="text" class="form-control"  placeholder="Introduzca el nombre...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputDireccion">Dirección *</label>
+         <input name="inputDireccion" id="inputDireccion" type="text" class="form-control"  placeholder="Introduzca la dirección...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputCp">CP *</label>
+         <input name="inputCp" id="inputCp" type="text" class="form-control"  placeholder="Introduzca el código postal...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputLocalidad">Localidad *</label>
+         <input name="inputLocalidad" id="inputLocalidad" type="text" class="form-control"  placeholder="Introduzca la localidad...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputProvincia">Provincia *</label>
+         <input name="inputProvincia" id="inputProvincia" type="text" class="form-control"  placeholder="Introduzca la provincia...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputPais">País *</label>
+         <input name="inputPais" id="inputPais" type="text" class="form-control"  placeholder="Introduzca el país...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputIban">Código IBAN *</label>
+         <input name="inputIban" id="inputIban" type="text" class="form-control"  placeholder="Introduzca el código IBAN...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
+         <label for="inputFormaPago">Forma de pago *</label>
+         <select name="inputFormaPago" id="inputFormaPago" class="form-control"  placeholder="Elija la forma de pago...">
+         <option value="1">Mensual</option>
+         <option value="3">Trimestral</option>
+         <option value="12">Anual</option>
+         </select>
      </div>
   </div>
-    <div class="panel-footer">Panel footer</div>
+    <div class="panel-footer">* Campo Requerido</div>
 </div>
 <div class="panel panel-primary">
     <div class="panel-heading">Datos de acceso:</div>
     <div class="panel-body">
 
     <div class="form-group">
-         <label for="inputNombre">Nombre *</label>
-         <input type="text" class="form-control" placeholder="Introduzca el Nombre...">
+         <label for="inputUsuario">Usuario *</label>
+         <input name="inputUsuario" id="inputUsuario" type="text" class="form-control"  placeholder="Introduzca el Nombre de usuario...">
      </div>
      <div class="form-group">
-         <label for="inputApellidos">Apellidos *</label>
-         <input type="text" class="form-control" placeholder="Introduzca los Apellidos...">
-     </div>
-      <div class="form-group">
-         <label for="inputTelefono">Teléfono *</label>
-         <input type="text" class="form-control" placeholder="Introduzca el Teléfono...">
+         <label for="inputContrasenna1">Contraseña *</label>
+         <input name="inputContrasenna1" id="inputContrasenna1" type="password" class="form-control"  placeholder="Introduzca la contraseña...">
      </div>
      <div class="form-group">
-         <label for="inputEmail1">Email *</label>
-         <input type="email" class="form-control"  placeholder="Introduzca el Email...">
-     </div>
-     <div class="form-group">
-         <label for="inputEmail2">Email *</label>
-         <input type="email" class="form-control"  placeholder="Repita el Email...">
+         <label for="inputContrasenna2">Repetir Contraseña</label>
+         <input name="inputContrasenna2" id="inputContrasenna2"type="password" class="form-control"  placeholder="Repita la contraseña...">
      </div>
      </div>
 
-     <div class="panel-footer">Panel footer</div>
+     <div class="panel-footer">* Campo Requerido</div>
 
      </div> 
      
-     <button type="submit" class="btn btn-primary">Enviar</button>
+     <input type="submit" class="btn btn-primary" value="Enviar"></button>
 </form>
+
+
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Confirmación para el proceso de alta</h4>
+                </div>
+                <div class="modal-body">     
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button id="cancelar" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+
+                    <button id="aceptar" type="button" class="btn btn-primary">Aceptar</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
 
 
     </div>
@@ -142,12 +180,19 @@
         <p>Oscar Pérez Pueyo - 2015</p>
       </div>
 
+
+
+
     </div>
+
+    
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="bower_components/jquery-validate/dist/additional-methods.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

@@ -2,7 +2,8 @@
   "name": "practica-validacion-formularios",
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.2.0",
-    "jquery-validate": "~1.13.1"
-  }
+    "chai": "~1.8.0",
+    "mocha": "~1.14.0"
+  },
+  "devDependencies": {}
 }
