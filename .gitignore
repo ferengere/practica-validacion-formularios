@@ -3,5 +3,5 @@ dist
 .tmp
 bower_components
 test/bower_components
-php/Bd.php
-php/test.php
+app/php/Bd.php
+app/php/test.php
