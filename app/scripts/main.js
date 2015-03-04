@@ -40,21 +40,15 @@ $.validator.setDefaults({
 
 
 $('#formulario').validate({
-    onkeyup: false,
-    onfocusout: false,
-    onclick: false,
-    //onchange: false,
     //reglas de validación para todos los campos
     rules: {
 
         //Información de contacto
         inputNombre: {
-            required: true,
-            lettersonly: true
+            required: true
         },
         inputApellidos: {
-            required: true,
-            lettersonly: true
+            required: true
         },
         inputTelefono: {
             required: true,
@@ -141,12 +135,10 @@ $('#formulario').validate({
     messages: {
         //Información de contacto
         inputNombre: {
-            required: 'Debe escribir su nombre',
-            lettersonly: 'Debe escribir sólo letras'
+            required: 'Debe escribir su nombre'
         },
         inputApellidos: {
-            required: 'Debe escribir sus apellidos',
-            lettersonly: 'Debe escribir sólo letras'
+            required: 'Debe escribir sus apellidos'
         },
         inputTelefono: {
             required: 'Debe escribir su teléfono',
@@ -281,20 +273,23 @@ var buscarMunicipio = function(cp) {
 
 
 $('#inputCp').on('change', function() {
-    var cpAnt = $(this).val();
-    var len = $(this).val().length;
-    var cpPos = '';
-    //console.log(len + ' ' + cpAnt);
+    if (!isNaN($(this).val())) {
 
-    if (len < 5) {
-        for (var i = 0; i < 5 - len; i++) {
-            cpPos += '0';
+        var cpAnt = $(this).val();
+        var len = $(this).val().length;
+        var cpPos = '';
+        //console.log(len + ' ' + cpAnt);
+
+        if (len < 5) {
+            for (var i = 0; i < 5 - len; i++) {
+                cpPos += '0';
+            }
         }
-    }
-    $(this).val(cpPos + cpAnt);
+        $(this).val(cpPos + cpAnt);
 
-    //buscar localidad y provincia
-    buscarMunicipio($(this).val());
+        //buscar localidad y provincia
+        buscarMunicipio($(this).val());
+    }
 });
 
 //
